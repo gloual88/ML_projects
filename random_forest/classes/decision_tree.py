@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-from .node import Node
+from node import Node
 
 class DecisionTree:
     """
