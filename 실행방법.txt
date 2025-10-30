@@ -1,0 +1,50 @@
+금리 민감 주식 분석 코드 실행 방법
+=====================================
+
+방법 1: 전체 분석 실행 (추천)
+------------------------------
+python example_rate_analysis.py
+
+이 명령어는 다음을 수행합니다:
+- 5년간 금리 데이터 다운로드
+- 금리 하락 월 식별
+- 주식 성과 분석
+- 상위 25개 종목 순위
+- 결과 저장 (CSV + 그래프)
+
+
+방법 2: 메인 코드 직접 실행
+----------------------------
+python rate_sensitive_stocks_analysis.py
+
+더 자세한 로그와 함께 전체 분석 실행
+
+
+방법 3: Python 인터프리터에서 사용
+----------------------------------
+python
+
+그 다음:
+>>> from rate_sensitive_stocks_analysis import RateSensitiveStockAnalyzer
+>>> analyzer = RateSensitiveStockAnalyzer(lookback_years=5)
+>>> results = analyzer.run_full_analysis(top_n=25)
+
+
+필수 설치:
+----------
+pip install yfinance pandas numpy matplotlib seaborn
+
+또는
+
+pip install -r requirements_rate_analysis.txt
+
+
+생성되는 파일:
+--------------
+1. rate_sensitive_stocks_results.csv  (분석 결과 데이터)
+2. rate_sensitive_stocks_analysis.png (시각화 그래프)
+
+
+예상 소요 시간:
+---------------
+약 5-10분 (인터넷 속도에 따라 다름)
