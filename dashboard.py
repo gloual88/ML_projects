@@ -157,45 +157,37 @@ with col_ytd:
     st.subheader("🌍 자산군별 상대 성과 비교")
     
     comparison_df = pd.DataFrame()
-    ma50 = None
-    ma200 = None
+    # 연초(올해 1월 1일) 이후로 기간 설정
+    start_of_year = datetime(datetime.now().year, 1, 1)
+    comparison_df = pd.DataFrame()
     for name, df in data_dict.items():
-        sub_df = df.tail(days_to_show)
+        if name == "VIX (공포지수)":
+            continue
+        sub_df = df[df.index >= start_of_year]
         if not sub_df.empty:
             first_val = sub_df['Close'].iloc[0]
             first_price = float(first_val.iloc[0]) if isinstance(first_val, pd.Series) else float(first_val)
             comparison_df[name] = (sub_df['Close'] / first_price) * 100
-            # 연초(올해 1월 1일) 이후로 기간 설정
-            start_of_year = datetime(datetime.now().year, 1, 1)
-            comparison_df = pd.DataFrame()
-            for name, df in data_dict.items():
-                if name == "VIX (공포지수)":
-                    continue
-                sub_df = df[df.index >= start_of_year]
-                if not sub_df.empty:
-                    first_val = sub_df['Close'].iloc[0]
-                    first_price = float(first_val.iloc[0]) if isinstance(first_val, pd.Series) else float(first_val)
-                    comparison_df[name] = (sub_df['Close'] / first_price) * 100
 
-            compare_fig = go.Figure()
-            for col in comparison_df.columns:
-                color = 'green' if col == "S&P 500" else None
-                compare_fig.add_trace(
-                    go.Scatter(
-                        x=comparison_df.index,
-                        y=comparison_df[col],
-                        name=col,
-                        line=dict(color=color) if color else {}
-                    )
-                )
-            compare_fig.update_layout(
-                title=f"자산군별 연초 이후 상대적 변동률 (기준점=100)",
-                yaxis_title="성과 지수",
-                template="plotly_white",
-                height=500,
-                legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
+    compare_fig = go.Figure()
+    for col in comparison_df.columns:
+        color = 'green' if col == "S&P 500" else None
+        compare_fig.add_trace(
+            go.Scatter(
+                x=comparison_df.index,
+                y=comparison_df[col],
+                name=col,
+                line=dict(color=color) if color else {}
             )
-            st.plotly_chart(compare_fig, use_container_width=True)
+        )
+    compare_fig.update_layout(
+        title=f"자산군별 연초 이후 상대적 변동률 (기준점=100)",
+        yaxis_title="성과 지수",
+        template="plotly_white",
+        height=500,
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
+    )
+    st.plotly_chart(compare_fig, use_container_width=True)
     rsi_last = main_df['RSI'].iloc[-1]
     rsi_val = float(rsi_last.iloc[0]) if isinstance(rsi_last, pd.Series) else float(rsi_last)
 
