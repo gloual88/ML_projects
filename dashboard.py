@@ -94,7 +94,8 @@ if "S&P 500" in data_dict and "VIX (공포지수)" in data_dict:
     vix_df = data_dict["VIX (공포지수)"].copy()
 
     # 기간 필터링
-    days_to_show = period_map[selected_period]
+    # 분석기간을 2년(730일)로 확장
+    days_to_show = 730
     main_df = main_df.tail(days_to_show)
     vix_df = vix_df.tail(days_to_show)
 
@@ -156,13 +157,19 @@ with col_ytd:
     st.subheader("🌍 자산군별 상대 성과 비교")
     
     comparison_df = pd.DataFrame()
+    ma50 = None
+    ma200 = None
     for name, df in data_dict.items():
         sub_df = df.tail(days_to_show)
         if not sub_df.empty:
             first_val = sub_df['Close'].iloc[0]
             first_price = float(first_val.iloc[0]) if isinstance(first_val, pd.Series) else float(first_val)
             comparison_df[name] = (sub_df['Close'] / first_price) * 100
-        
+            # S&P500 이동평균선 계산
+            if name == "S&P 500":
+                ma50 = ta.sma(sub_df['Close'], length=50)
+                ma200 = ta.sma(sub_df['Close'], length=200)
+
     compare_fig = go.Figure()
     for col in comparison_df.columns:
         color = 'green' if col == "S&P 500" else None
@@ -174,12 +181,31 @@ with col_ytd:
                 line=dict(color=color) if color else {}
             )
         )
-        
+    # S&P500 이동평균선 추가 및 범례 표시
+    if ma50 is not None:
+        compare_fig.add_trace(
+            go.Scatter(
+                x=comparison_df.index,
+                y=ma50,
+                name="S&P 500 MA50",
+                line=dict(color='orange', dash='dot')
+            )
+        )
+    if ma200 is not None:
+        compare_fig.add_trace(
+            go.Scatter(
+                x=comparison_df.index,
+                y=ma200,
+                name="S&P 500 MA200",
+                line=dict(color='red', dash='dash')
+            )
+        )
     compare_fig.update_layout(
-        title=f"선택 기간 내 상대적 변동률 (기준점=100)",
+        title=f"2년간 상대적 변동률 및 S&P500 이동평균선 (기준점=100)",
         yaxis_title="성과 지수",
         template="plotly_white",
-        height=500
+        height=500,
+        legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1)
     )
     st.plotly_chart(compare_fig, use_container_width=True)
 
