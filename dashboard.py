@@ -165,11 +165,11 @@ with col_ytd:
             first_val = sub_df['Close'].iloc[0]
             first_price = float(first_val.iloc[0]) if isinstance(first_val, pd.Series) else float(first_val)
             comparison_df[name] = (sub_df['Close'] / first_price) * 100
-            # 분석기간을 2년(730일)로 설정
-            days_to_show = 730
+            # 연초(올해 1월 1일) 이후로 기간 설정
+            start_of_year = datetime(datetime.now().year, 1, 1)
             comparison_df = pd.DataFrame()
             for name, df in data_dict.items():
-                sub_df = df.tail(days_to_show)
+                sub_df = df[df.index >= start_of_year]
                 if not sub_df.empty:
                     first_val = sub_df['Close'].iloc[0]
                     first_price = float(first_val.iloc[0]) if isinstance(first_val, pd.Series) else float(first_val)
@@ -187,7 +187,7 @@ with col_ytd:
                     )
                 )
             compare_fig.update_layout(
-                title=f"자산군별 2년간 상대적 변동률 (기준점=100)",
+                title=f"자산군별 연초 이후 상대적 변동률 (기준점=100)",
                 yaxis_title="성과 지수",
                 template="plotly_white",
                 height=500,
