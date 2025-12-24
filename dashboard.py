@@ -24,16 +24,16 @@ tickers = {
 }
 
 # 기간 설정
-period_map = {"1개월": 30, "3개월": 90, "6개월": 180, "1년": 365, "2년": 730}
-selected_period = st.sidebar.selectbox("조회 기간 선택", list(period_map.keys()), index=3)
+period_map = {"1개월": 30, "3개월": 90, "6개월": 180, "1년": 365, "2년": 730, "5년": 1825}
+selected_period = st.sidebar.selectbox("조회 기간 선택", list(period_map.keys()), index=4)
 
 # 데이터 캐싱 (속도 및 효율성)
 @st.cache_data(ttl=3600)
 def fetch_data(symbol, days=730):
     try:
         end_date = datetime.now()
-        start_date = end_date - timedelta(days=days)
-        # auto_adjust=True를 통해 구조 단순화, multi_level 인덱스 방지 시도
+        # MA120이 항상 계산될 수 있도록 최소 5년치 데이터 다운로드
+        start_date = end_date - timedelta(days=1825)
         data = yf.download(symbol, start=start_date, end=end_date, progress=False, auto_adjust=True)
         
         # 데이터가 비어있지 않은지 확인
@@ -131,24 +131,21 @@ with col_tech:
     if len(main_df) > 20:
         main_df['RSI'] = ta.rsi(main_df['Close'], length=14)
         main_df['MA50'] = ta.sma(main_df['Close'], length=50)
-        main_df['MA200'] = ta.sma(main_df['Close'], length=200)
-        
+        main_df['MA120'] = ta.sma(main_df['Close'], length=120)
+        # 연초 이후 데이터만 표시
+        start_of_year = datetime(datetime.now().year, 1, 1)
+        main_df_ytd = main_df[main_df.index >= start_of_year]
         tech_fig = make_subplots(rows=2, cols=1, shared_xaxes=True, vertical_spacing=0.08, row_heights=[0.7, 0.3])
-        
         # 주가 및 이평선
-        tech_fig.add_trace(go.Scatter(x=main_df.index, y=main_df['Close'], name="Price", line=dict(color='green')), row=1, col=1)
-        if 'MA50' in main_df:
-            tech_fig.add_trace(go.Scatter(x=main_df.index, y=main_df['MA50'], name="50일 이평선", line=dict(color='orange', dash='dot')), row=1, col=1)
-        if 'MA200' in main_df:
-            tech_fig.add_trace(go.Scatter(x=main_df.index, y=main_df['MA200'], name="200일 이평선", line=dict(color='red', dash='dash')), row=1, col=1)
-        
+        tech_fig.add_trace(go.Scatter(x=main_df_ytd.index, y=main_df_ytd['Close'], name="Price", line=dict(color='green')), row=1, col=1)
+        tech_fig.add_trace(go.Scatter(x=main_df_ytd.index, y=main_df_ytd['MA50'], name="MA50 (주황)", line=dict(color='orange', dash='dot')), row=1, col=1)
+        tech_fig.add_trace(go.Scatter(x=main_df_ytd.index, y=main_df_ytd['MA120'], name="MA120 (빨강)", line=dict(color='red', dash='dash')), row=1, col=1)
         # RSI
-        if 'RSI' in main_df:
-            tech_fig.add_trace(go.Scatter(x=main_df.index, y=main_df['RSI'], name="RSI (14)", line=dict(color='purple')), row=2, col=1)
-            tech_fig.add_hline(y=70, line_dash="dot", line_color="red", row=2, col=1)
-            tech_fig.add_hline(y=30, line_dash="dot", line_color="green", row=2, col=1)
-        
-        tech_fig.update_layout(height=500, template="plotly_white", showlegend=False)
+        tech_fig.add_trace(go.Scatter(x=main_df_ytd.index, y=main_df_ytd['RSI'], name="RSI (14)", line=dict(color='purple')), row=2, col=1)
+        tech_fig.add_hline(y=70, line_dash="dot", line_color="red", row=2, col=1)
+        tech_fig.add_hline(y=30, line_dash="dot", line_color="green", row=2, col=1)
+        tech_fig.update_layout(height=500, template="plotly_white", showlegend=True,
+            legend=dict(orientation="h", yanchor="bottom", y=1.02, xanchor="right", x=1))
         st.plotly_chart(tech_fig, use_container_width=True)
     else:
         st.info("기술적 분석을 위한 데이터가 부족합니다.")
