@@ -169,6 +169,8 @@ with col_ytd:
             start_of_year = datetime(datetime.now().year, 1, 1)
             comparison_df = pd.DataFrame()
             for name, df in data_dict.items():
+                if name == "VIX (공포지수)":
+                    continue
                 sub_df = df[df.index >= start_of_year]
                 if not sub_df.empty:
                     first_val = sub_df['Close'].iloc[0]
