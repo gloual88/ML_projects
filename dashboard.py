@@ -154,6 +154,12 @@ with col_tech:
         st.info("기술적 분석을 위한 데이터가 부족합니다.")
 
 with col_ytd:
+    vix_df = data_dict.get("VIX (공포지수)")
+    if vix_df is not None and not vix_df.empty:
+        vix_last = vix_df['Close'].iloc[-1]
+        vix_val = float(vix_last.iloc[0]) if isinstance(vix_last, pd.Series) else float(vix_last)
+    else:
+        vix_val = None
     st.subheader("🌍 자산군별 상대 성과 비교")
     
     comparison_df = pd.DataFrame()
@@ -194,10 +200,13 @@ with col_ytd:
 a1, a2, a3 = st.columns(3)
 
 with a1:
-    if vix_val > 25:
-        st.error(f"🚨 시장 불안정: VIX가 {vix_val:.2f}로 높습니다.")
+    if vix_val is not None:
+        if vix_val > 25:
+            st.error(f"🚨 시장 불안정: VIX가 {vix_val:.2f}로 높습니다.")
+        else:
+            st.success(f"✅ 변동성 양호: VIX가 {vix_val:.2f}로 안정권입니다.")
     else:
-        st.success(f"✅ 변동성 양호: VIX가 {vix_val:.2f}로 안정권입니다.")
+        st.info("VIX 데이터가 없습니다.")
 
 with a2:
     if rsi_val > 70:
