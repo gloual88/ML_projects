@@ -135,7 +135,7 @@ with col_tech:
         tech_fig = make_subplots(rows=2, cols=1, shared_xaxes=True, vertical_spacing=0.08, row_heights=[0.7, 0.3])
         
         # 주가 및 이평선
-        tech_fig.add_trace(go.Scatter(x=main_df.index, y=main_df['Close'], name="Price", line=dict(color='black')), row=1, col=1)
+        tech_fig.add_trace(go.Scatter(x=main_df.index, y=main_df['Close'], name="Price", line=dict(color='green')), row=1, col=1)
         if 'MA50' in main_df:
             tech_fig.add_trace(go.Scatter(x=main_df.index, y=main_df['MA50'], name="50일 이평선", line=dict(color='orange', dash='dot')), row=1, col=1)
         if 'MA200' in main_df:
@@ -165,7 +165,15 @@ with col_ytd:
         
     compare_fig = go.Figure()
     for col in comparison_df.columns:
-        compare_fig.add_trace(go.Scatter(x=comparison_df.index, y=comparison_df[col], name=col))
+        color = 'green' if col == "S&P 500" else None
+        compare_fig.add_trace(
+            go.Scatter(
+                x=comparison_df.index,
+                y=comparison_df[col],
+                name=col,
+                line=dict(color=color) if color else {}
+            )
+        )
         
     compare_fig.update_layout(
         title=f"선택 기간 내 상대적 변동률 (기준점=100)",
