@@ -3,3 +3,9 @@ yfinance
 plotly
 pandas_ta
 pandas
+Flask>=2.3.0
+yfinance>=0.2.32
+pandas>=2.0.0
+pandas-ta>=0.3.14b0
+numpy>=1.24.0
+requests>=2.31.0

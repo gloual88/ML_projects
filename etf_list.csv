@@ -1,0 +1,197 @@
+Category,Ticker,Name,Type,Detail
+Broad market ETFs,ITOT,iShares Core S&P Total U.S. Stock Market ETF,Broad Market,US Market
+Broad market ETFs,SCHB,Schwab U.S. Broad Market ETF,Broad Market,US Market
+Broad market ETFs,VT,Vanguard Total World Stock,Broad Market,Global Market
+Broad market ETFs,VTHR,Vanguard Russell 3000,Broad Market,US Market
+Broad market ETFs,VTI,Vanguard Total Stock Market,Broad Market,US Market
+Broad market ETFs,WFVK,Wilshire 5000 Total Market,Broad Market,US Market
+Style ETFs,IWB,iShares Russell 1000 Index,Style ETF,Large Cap
+Style ETFs,IWF,iShares Russell 1000 Growth Index,Style ETF,Growth
+Style ETFs,IWD,iShares Russell 1000 Value Index,Style ETF,Value
+Style ETFs,IVV,iShares S&P 500 Index,Style ETF,Large Cap
+Style ETFs,IVW,iShares S&P 500 Growth Index,Style ETF,Growth
+Style ETFs,IVE,iShares S&P 500 Value Index,Style ETF,Value
+Style ETFs,SCHX,Schwab U.S. Large-Cap,Style ETF,Large Cap
+Style ETFs,SCHG,Schwab U.S. Large-Cap Growth,Style ETF,Growth
+Style ETFs,SCHV,Schwab U.S. Large-Cap Value,Style ETF,Value
+Style ETFs,SCHD,Schwab U.S. Dividend Equity,Style ETF,Dividend
+Style ETFs,SPY,SPDR S&P 500,Style ETF,Large Cap
+Style ETFs,SPYG,SPDR S&P 500 Growth,Style ETF,Growth
+Style ETFs,SPYV,SPDR S&P 500 Value,Style ETF,Value
+Style ETFs,VOO,Vanguard S&P 500,Style ETF,Large Cap
+Style ETFs,VOOG,Vanguard S&P 500 Growth,Style ETF,Growth
+Style ETFs,VOOV,Vanguard S&P 500 Value,Style ETF,Value
+Style ETFs,VV,Vanguard Large-Cap,Style ETF,Large Cap
+Style ETFs,VUG,Vanguard Growth,Style ETF,Growth
+Style ETFs,VTV,Vanguard Value,Style ETF,Value
+Style ETFs,MGC,Vanguard Mega-Cap 300,Style ETF,Mega Cap
+Style ETFs,MGK,Vanguard Mega-Cap 300 Growth,Style ETF,Growth
+Style ETFs,MGV,Vanguard Mega-Cap 300 Value,Style ETF,Value
+Style ETFs,VONE,Vanguard Russell 1000,Style ETF,Large Cap
+Style ETFs,VONG,Vanguard Russell 1000 Growth,Style ETF,Growth
+Style ETFs,VONV,Vanguard Russell 1000 Value,Style ETF,Value
+Style ETFs,VIG,Vanguard Dividend Appreciation,Style ETF,Dividend
+Style ETFs,VYM,Vanguard High Dividend Yield,Style ETF,Dividend
+Mid-cap ETFs,IWR,iShares Russell Midcap Index,Style ETF,Mid Cap
+Mid-cap ETFs,IWP,iShares Russell Midcap Growth Index,Style ETF,Growth
+Mid-cap ETFs,IWS,iShares Russell Midcap Value Index,Style ETF,Value
+Mid-cap ETFs,IJH,iShares S&P MidCap 400 Index,Style ETF,Mid Cap
+Mid-cap ETFs,IJK,iShares S&P MidCap 400 Growth Index,Style ETF,Growth
+Mid-cap ETFs,IJJ,iShares S&P MidCap 400 Value Index,Style ETF,Value
+Mid-cap ETFs,SCHM,Schwab U.S. Mid-Cap,Style ETF,Mid Cap
+Mid-cap ETFs,MDY,SPDR S&P Mid Cap 400,Style ETF,Mid Cap
+Mid-cap ETFs,MDYG,SPDR S&P Mid Cap 400 Growth,Style ETF,Growth
+Mid-cap ETFs,MDYV,SPDR S&P Mid Cap 400 Value,Style ETF,Value
+Mid-cap ETFs,IVOO,Vanguard S&P Mid-Cap 400,Style ETF,Mid Cap
+Mid-cap ETFs,IVOG,Vanguard S&P Mid-Cap 400 Growth,Style ETF,Growth
+Mid-cap ETFs,IVOV,Vanguard S&P Mid-Cap 400 Value,Style ETF,Value
+Mid-cap ETFs,VO,Vanguard Mid-Cap,Style ETF,Mid Cap
+Mid-cap ETFs,VOT,Vanguard Mid-Cap Growth,Style ETF,Growth
+Mid-cap ETFs,VOE,Vanguard Mid-Cap Value,Style ETF,Value
+Mid-cap ETFs,VXF,Vanguard Extended Market,Style ETF,Extended Market
+Mid-cap ETFs,WXSP,Wilshire 4500 ETF,Style ETF,Mid Cap
+Small-cap ETFs,IWM,iShares Russell 2000 Index,Style ETF,Small Cap
+Small-cap ETFs,IWN,iShares Russell 2000 Value Index,Style ETF,Value
+Small-cap ETFs,IWO,iShares Russell 2000 Growth Index,Style ETF,Growth
+Small-cap ETFs,IJR,iShares S&P SmallCap 600 Index,Style ETF,Small Cap
+Small-cap ETFs,IJT,iShares S&P SmallCap 600 Growth Index,Style ETF,Growth
+Small-cap ETFs,IJS,iShares S&P SmallCap 600 Value Index,Style ETF,Value
+Small-cap ETFs,SCHA,Schwab U.S. Small-Cap,Style ETF,Small Cap
+Small-cap ETFs,SLY,SPDR Small Cap S&P 600,Style ETF,Small Cap
+Small-cap ETFs,SLYG,SPDR Small Cap S&P 600 Growth,Style ETF,Growth
+Small-cap ETFs,VIOO,Vanguard S&P Small-Cap 600,Style ETF,Small Cap
+Small-cap ETFs,VIOG,Vanguard S&P Small-Cap 600 Growth,Style ETF,Growth
+Small-cap ETFs,VIOV,Vanguard S&P Small-Cap 600 Value,Style ETF,Value
+Small-cap ETFs,VB,Vanguard Small-Cap,Style ETF,Small Cap
+Small-cap ETFs,VBK,Vanguard Small-Cap Growth,Style ETF,Growth
+Small-cap ETFs,VBR,Vanguard Small-Cap Value,Style ETF,Value
+Small-cap ETFs,VTWO,Vanguard Russell 2000,Style ETF,Small Cap
+Small-cap ETFs,VTWG,Vanguard Russell 2000 Growth,Style ETF,Growth
+Small-cap ETFs,VTWV,Vanguard Russell 2000 Value,Style ETF,Value
+Consumer sector ETFs,XLY,Consumer Discretionary Select Sector SPDR,S&P 500 Sector,Consumer Discretionary
+Consumer sector ETFs,XLP,Consumer Staples Select Sector SPDR,S&P 500 Sector,Consumer Staples
+Consumer sector ETFs,IYK,iShares Dow Jones US Consumer Goods,Style ETF,Consumer
+Consumer sector ETFs,IYC,iShares Dow Jones US Consumer Services,Style ETF,Consumer
+Consumer sector ETFs,VCR,Vanguard Consumer Discretionary,Style ETF,Consumer
+Consumer sector ETFs,VDC,Vanguard Consumer Staples,Style ETF,Consumer
+Energy sector ETFs,XLE,Energy Select Sector SPDR,S&P 500 Sector,Energy
+Energy sector ETFs,IYE,iShares Dow Jones US Energy,Style ETF,Energy
+Energy sector ETFs,VDE,Vanguard Energy,Style ETF,Energy
+Financial sector ETFs,XLF,Financial Select Sector SPDR,S&P 500 Sector,Financials
+Financial sector ETFs,IYF,iShares Dow Jones US Financial,Style ETF,Financial
+Financial sector ETFs,VFH,Vanguard Financials,Style ETF,Financial
+Healthcare sector ETFs,XLV,Health Care Select Sector SPDR,S&P 500 Sector,Healthcare
+Healthcare sector ETFs,IYH,iShares Dow Jones US Health Care,Style ETF,Healthcare
+Healthcare sector ETFs,VHC,Vanguard Health Care,Style ETF,Healthcare
+Industrial sectors ETFs,XLI,Industrial Select Sector SPDR,S&P 500 Sector,Industrials
+Industrial sectors ETFs,IYJ,iShares Dow Jones US Industrial,Style ETF,Industrial
+Industrial sectors ETFs,VIS,Vanguard Industrials,Style ETF,Industrial
+Materials sector ETFs,XLB,Materials Select Sector SPDR,S&P 500 Sector,Materials
+Materials sector ETFs,IYM,iShares Dow Jones US Materials,Style ETF,Materials
+Materials sector ETFs,VAW,Vanguard Materials,Style ETF,Materials
+Real estate ETFs,ICF,iShares Cohen & Steers Realty Majors,Style ETF,Real Estate
+Real estate ETFs,IYR,iShares Dow Jones US Real Estate,Style ETF,Real Estate
+Real estate ETFs,SCHH,Schwab U.S. REIT ETF,Style ETF,Real Estate
+Real estate ETFs,RWR,SPDR Dow Jones REIT ETF,Style ETF,Real Estate
+Real estate ETFs,VNQ,Vanguard REIT,Style ETF,Real Estate
+Real estate ETFs,WREI,Wilshire US REIT ETF,Style ETF,Real Estate
+Technology sector ETFs,XLK,Technology Select Sector SPDR,S&P 500 Sector,Technology
+Technology sector ETFs,IYW,iShares Dow Jones US Technology,Style ETF,Technology
+Technology sector ETFs,VGT,Vanguard Information Technology,Style ETF,Technology
+Telecom sector ETFs,IYZ,iShares Dow Jones US Telecommunications,Style ETF,Telecom
+Telecom sector ETFs,VOX,Vanguard Telecommunication Services,Style ETF,Telecom
+Utilities sector ETFs,XLU,Select Sector Utilities SPDR,S&P 500 Sector,Utilities
+Utilities sector ETFs,IDU,iShares Dow Jones US Utilities,Style ETF,Utilities
+Utilities sector ETFs,VPU,Vanguard Utilities,Style ETF,Utilities
+Broad ex-US ETFs,IXUS,iShares Core MSCI Total International Stock ETF,Style ETF,International
+Broad ex-US ETFs,CWI,SPDR MSCI AWCI ex-US ETF,Style ETF,International
+Broad ex-US ETFs,VXUS,Vanguard Total International Stock,Style ETF,International
+Broad ex-US ETFs,VEU,Vanguard FTSE All-World ex-US,Style ETF,International
+Broad ex-US ETFs,VSS,Vanguard FTSE All-World ex-US Small-Cap,Style ETF,International
+Regional ex-US ETFs,AND,Global X FTSE Andean 40 ETF,Style ETF,Regional
+Regional ex-US ETFs,GXF,Global X FTSE Nordic Region,Style ETF,Regional
+Regional ex-US ETFs,EFA,iShares MSCI EAFE Index,Style ETF,International
+Regional ex-US ETFs,EFG,iShares MSCI EAFE Growth Index,Style ETF,Growth
+Regional ex-US ETFs,EFV,iShares MSCI EAFE Value Index,Style ETF,Value
+Regional ex-US ETFs,SCZ,iShares MSCI EAFE Small Cap Index,Style ETF,Small Cap
+Regional ex-US ETFs,EZU,iShares MSCI EMU Index,Style ETF,Regional
+Regional ex-US ETFs,EPP,iShares MSCI Pacific ex-Japan,Style ETF,Regional
+Regional ex-US ETFs,IEV,iShares S&P Europe 350 Index,Style ETF,Regional
+Regional ex-US ETFs,ILF,iShares S&P Latin America 40 Index,Style ETF,Regional
+Regional ex-US ETFs,SCHF,Schwab International Equity,Style ETF,International
+Regional ex-US ETFs,SCHC,Schwab International Small-Cap Equity,Style ETF,Small Cap
+Regional ex-US ETFs,MDD,SPDR S&P International Mid Cap ETF,Style ETF,Mid Cap
+Regional ex-US ETFs,GWX,SPDR S&P International Small Cap ETF,Style ETF,Small Cap
+Regional ex-US ETFs,VEA,Vanguard MSCI EAFE,Style ETF,International
+Regional ex-US ETFs,VGK,Vanguard FTSE Europe,Style ETF,Regional
+Regional ex-US ETFs,VPL,Vanguard FTSE Pacific,Style ETF,Regional
+Emerging markets ETFs,EMGX,Global X Russell Emerging Markets Growth ETF,Style ETF,Growth
+Emerging markets ETFs,EMVX,Global X Russell Emerging Markets Value ETF,Style ETF,Value
+Emerging markets ETFs,EEB,Guggenheim BRIC ETF,Style ETF,Emerging Market
+Emerging markets ETFs,EEM,iShares MSCI Emerging Markets Index,Style ETF,Emerging Market
+Emerging markets ETFs,EEMS,iShares MSCI Emerging Markets Small Cap Index,Style ETF,Small Cap
+Emerging markets ETFs,BKF,iShares MSCI BRIC Index,Style ETF,Emerging Market
+Emerging markets ETFs,SCHE,Schwab Emerging Markets Equity ETF,Style ETF,Emerging Market
+Emerging markets ETFs,GMM,SPDR S&P Emerging Markets ETF,Style ETF,Emerging Market
+Emerging markets ETFs,EWX,SPDR S&P Emerging Markets Small Cap ETF,Style ETF,Small Cap
+Emerging markets ETFs,VWO,Vanguard MSCI Emerging Markets,Style ETF,Emerging Market
+Developed ex-US markets,NORW,Global X FTSE Norway 30 ETF,Style ETF,Regional
+Developed ex-US markets,EWA,iShares MSCI Australia Index,Style ETF,Regional
+Developed ex-US markets,EWO,iShares MSCI Austria Investable Index,Style ETF,Regional
+Developed ex-US markets,EWK,iShares MSCI Belgium Investable Index,Style ETF,Regional
+Developed ex-US markets,EWC,iShares MSCI Canada Index,Style ETF,Regional
+Developed ex-US markets,EWQ,iShares MSCI France Index,Style ETF,Regional
+Developed ex-US markets,EWG,iShares MSCI German Index,Style ETF,Regional
+Developed ex-US markets,EWI,iShares MSCI Italy Index,Style ETF,Regional
+Developed ex-US markets,EWJ,iShares MSCI Japan Index,Style ETF,Regional
+Developed ex-US markets,EWP,iShares MSCI Spain Index,Style ETF,Regional
+Developed ex-US markets,EWD,iShares MSCI Sweden Index,Style ETF,Regional
+Developed ex-US markets,EWL,iShares MSCI Switzerland Index,Style ETF,Regional
+Developed ex-US markets,EWU,iShares MSCI United Kingdom Index,Style ETF,Regional
+Emerging markets,ARGT,Global X FTSE Argentina 20 ETF,Style ETF,Regional
+Emerging markets,BRAF,Global X Brazil Financials ETF,Style ETF,Regional
+Emerging markets,BRAQ,Global X Brazil Consumer ETF,Style ETF,Regional
+Emerging markets,BRAZ,Global X Brazil Mid Cap ETF,Style ETF,Regional
+Emerging markets,GXG,Global X FTSE Colombia 20 ETF,Style ETF,Regional
+Emerging markets,MEXS,Global X Mexico Small-Cap ETF,Style ETF,Regional
+Emerging markets,EWZ,iShares MSCI Brazil Index,Style ETF,Regional
+Emerging markets,FXI,iShares FTSE/Xinhua China 25 Index,Style ETF,Regional
+Emerging markets,EWH,iShares MSCI Hong Kong Index,Style ETF,Regional
+Emerging markets,EWW,iShares MSCI Mexico Index,Style ETF,Regional
+Emerging markets,ERUS,iShares Russia Capped Index,Style ETF,Regional
+Emerging markets,EWS,iShares MSCI Singapore Index,Style ETF,Regional
+Emerging markets,EWM,iShares MSCI Malaysia Index,Style ETF,Regional
+Emerging markets,EWY,iShares MSCI South Korea Index,Style ETF,Regional
+Emerging markets,EWT,iShares MSCI Taiwan Index,Style ETF,Regional
+Emerging markets,RSX,Market Vectors Russia ETF,Style ETF,Regional
+Emerging markets,RBL,SPDR S&P Russia ETF,Style ETF,Regional
+Agricultural ETFs,RJA,ELEMENTS Rogers Agriculture ETN,Style ETF,Commodity
+Agricultural ETFs,SOIL,Global X Fertilizers/Potash ETF,Style ETF,Commodity
+Agricultural ETFs,BARN,Global X Farming ETF,Style ETF,Commodity
+Agricultural ETFs,JJA,iPath Dow Jones-AIG Agriculture ETN,Style ETF,Commodity
+Agricultural ETFs,DBA,PowerShares DB Agriculture,Style ETF,Commodity
+Energy commodity ETFs,RJN,ELEMENTS Rogers Energy ETN,Style ETF,Commodity
+Energy commodity ETFs,URA,Global X Uranium ETF,Style ETF,Commodity
+Energy commodity ETFs,XOIL,Global X Oil Equities ETF,Style ETF,Commodity
+Energy commodity ETFs,LIT,Global X Lithium ETF,Style ETF,Commodity
+Energy commodity ETFs,OIL,iPath S&P GSCI Crude Oil Total Return Index ETN,Style ETF,Commodity
+Energy commodity ETFs,GAZ,iPath Dow Jones-UBS Natural Gas Subindex Total ReturnSM ETN,Style ETF,Commodity
+Energy commodity ETFs,UNG,United States Natural Gas Fund,Style ETF,Commodity
+Energy commodity ETFs,USO,United States Oil Fund,Style ETF,Commodity
+Industrial commodity ETFs,RJZ,ELEMENTS Rogers Metal ETN,Style ETF,Commodity
+Industrial commodity ETFs,ALUM,Global X Aluminum ETF,Style ETF,Commodity
+Industrial commodity ETFs,COPX,Global X Copper Miners ETF,Style ETF,Commodity
+Industrial commodity ETFs,JJM,iPath Dow Jones-AIG Industrial Metals ETN,Style ETF,Commodity
+Industrial commodity ETFs,JJC,iPath Dow Jones-AIG Copper ETN,Style ETF,Commodity
+Industrial commodity ETFs,DBB,PowerShares DB Base Metals,Style ETF,Commodity
+Precious metals ETFs,IAU,iShares COMEX Gold Trust,S&P 500 Sector,Precious Metal
+Precious metals ETFs,GLD,SPDR Gold Shares,S&P 500 Sector,Precious Metal
+Precious metals ETFs,SIVR,ETFS Silver Trust,S&P 500 Sector,Precious Metal
+Precious metals ETFs,SLV,iShares Silver Trust,S&P 500 Sector,Precious Metal
+Precious metals ETFs,PALL,ETFS Physical Palladium Shares,S&P 500 Sector,Precious Metal
+Precious metals ETFs,PPLT,ETFS Physical Platinum Shares,S&P 500 Sector,Precious Metal
+Precious metals ETFs,GGGG,Global X Pure Gold Miners ETF,S&P 500 Sector,Precious Metal
+Precious metals ETFs,GLDX,Global X Gold Explorers ETF,S&P 500 Sector,Precious Metal
+Precious metals ETFs,SIL,Global X Silver Miners ETF,S&P 500 Sector,Precious Metal
+```
+
